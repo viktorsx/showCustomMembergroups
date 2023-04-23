@@ -47,6 +47,20 @@
 		if (!isset($txt['sCM_title'] ))
 			loadLanguage('showCustomMembergroups');
 
+			// Display primary member group first
+    echo '
+        <dl class="noborder">
+            <dt>', $txt['primary_membergroup'] , ': </dt>
+            <dd>
+                <ul class="reset">
+                    <li>
+                        <span style="padding:15px 5px 0 0;vertical-align: middle;">', $context['member']['group_stars'] ,'</span>
+
+                    </li>
+                </ul>
+            </dd>
+        </dl>';
+
 		echo '
 				<dl class="noborder">
 					<dt>', $txt['sCM_ui'] , ': </dt>
